@@ -61,6 +61,10 @@ p {
   border-top-color: #f2f2f220;
 }
 
+.search-bar input[type="search"]:focus{
+    outline: none;
+}
+
 .button {
   padding: 15px;
   background-color: #0065fc;
@@ -172,14 +176,14 @@ a {
   font-size: 22px;
 }
 
-.card {
+.card, .cardheb {
   background-color: white;
   border-radius: 20px;
   padding: 5px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
-.card img {
+.card img , .cardheb img {
   object-fit:cover;
 }
 
@@ -212,27 +216,56 @@ a {
 .hebergements {
   width: 65%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+flex-wrap: wrap; 
 }
 
+.hebergements-title {
+    align-items: center;
+    flex: 1 100%;
+
+}
   .hebergements-cards {
     display:flex;
     flex-wrap: wrap;
+    margin: 15px;
+      
   }
   
-  .card img {
-    height: 136px;
+  .cardheb img {
     width: 100%;
+    height: 136px;
     object-fit: cover;
-    border-radius: 15px
+    border-radius: 15px 15px 0 0;
+    
   }
   
-  .card {
+  .cardheb{
     text-decoration: none;
     color: inherit;
-    padding: 5px
+    padding: 5px;
+    width: 200px; 
+    
   }
+
+
+
+
+  .hebergements-cards .card-content {
+    width: 100%;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  }
+
+  .card-txt {
+    width: 100%;
+   }
+
+   .afficher {
+    font-size: 100%;
+    font-weight: 600;
+    margin-top: 10px;
+   }
 
 
 
@@ -241,7 +274,7 @@ a {
   width: 32%;
 }
 
-.populaires-title, .hebergements-title {
+.populaires-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -280,6 +313,79 @@ a {
 .populaires-cards .card-rating {
   margin-bottom: 5px;
 }
+
+
+/*--------------Activités----------------*/
+
+.activities {
+    display: flex;
+    flex-wrap: row wrap; 
+    width:   90%;
+    gap: 20px;
+   
+}
+
+.activites-title {
+    margin-left: 50px;
+    margin-bottom:-20px;
+   
+}
+
+
+.cardact img {
+width: 300px;
+height: 85%;
+object-fit: cover;
+border-radius: 15px 15px 0 0;
+
+}
+
+.cardact {
+    background-color: white;
+    border-radius: 20px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    height: 90%;
+}
+
+
+.activities .card-content {
+    
+    padding-left: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    
+}
+
+.pdp {
+    display: flex;
+    justify-content: space-around;
+    gap: 20%;
+    background-color:#f2f2f2;
+    width: 100%;
+    height: 100%;
+
+}
+footer {
+    height: 8%;
+}
+.about-footer, .hebergement-footer, .assistance-footer  {
+    text-decoration: none;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 6%;
+
+}
+
+.about-footer div,
+.hebergement-footer div,
+.assistance-footer div {
+    margin-bottom: 10px; 
+}
+
+
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
