@@ -7,7 +7,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
+  padding-top: ;
   padding-left: 50px;
 }
 
@@ -22,11 +22,21 @@ nav {
   text-decoration: none;
 }
 
-.navlink:hover {
+.navlink:hover, .navlink:focus {
   border-width: 2px 0 0 0;
   border-style: solid;
   border-color: #0065fc;
 }
+
+.navlink {
+    display: flex;
+    border-width: 2px 0 0 0;
+    border-style: solid;
+    border-color: white;
+    height:50px;
+    align-items: center;
+    
+  }
 
 h1 {
   margin-bottom: -5px;
@@ -53,12 +63,21 @@ p {
   border-radius: 13px 0 0 13px;
 }
 
+.location i {
+    color: #000000;
+}
+
+
 .search-bar input[type="search"] {
   padding: 15px;
   border-left: none;
   border-right: none;
   border-bottom-color: #f2f2f2;
   border-top-color: #f2f2f220;
+}
+
+.search-bar input[type="search"]::placeholder {
+    color: black;
 }
 
 .search-bar input[type="search"]:focus{
@@ -70,6 +89,7 @@ p {
   background-color: #0065fc;
   border: none;
   border-radius: 0 13px 13px 0;
+  cursor: pointer;
 }
 .button button {
   border: none;
@@ -77,6 +97,8 @@ p {
   font-size: medium;
   font-weight: 520;
   background-color: #0065fc;
+  cursor: pointer;
+
 }
 
 .textclass {
@@ -141,7 +163,9 @@ p {
 
 
 
-
+section {
+    padding-bottom: 0;
+}
 
 
 :root {
@@ -155,6 +179,8 @@ p {
 }
 
 body {
+    padding: 0;
+    margin: 0;
   display: flex;
   justify-content: center;
 }
@@ -217,6 +243,7 @@ a {
   width: 65%;
   display: flex;
 flex-wrap: wrap; 
+justify-content: center;
 }
 
 .hebergements-title {
@@ -265,6 +292,7 @@ flex-wrap: wrap;
     font-size: 100%;
     font-weight: 600;
     margin-top: 10px;
+    width: 100%;
    }
 
 
@@ -322,12 +350,14 @@ flex-wrap: wrap;
     flex-wrap: row wrap; 
     width:   90%;
     gap: 20px;
+    padding-top: ;
    
 }
 
 .activites-title {
     margin-left: 50px;
     margin-bottom:-20px;
+    padding-top: 4%;
    
 }
 
@@ -392,6 +422,21 @@ footer {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
+
+    .main-container {
+        width: 100%;
+        max-width: 1024px;
+        padding: 0 50px;
+        box-sizing: border-box;
+      }
+
+
+
+
+
+
+
   .hebergements-and-populaires {
     flex-direction: column;
   }
@@ -426,5 +471,35 @@ footer {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-  /* ... */
-}
+    .hebergements-and-populaires {
+        flex-direction: column;
+      }
+    
+      .hebergements {
+        width: 100%;
+      }
+    
+      .populaires {
+        width: 100%;
+        margin-top: 50px;
+      }
+    
+      .populaires-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    
+      .populaires-cards a {
+        width: ;
+      }
+    
+      .populaires-cards .card-title {
+        font-size: ;
+      }
+    
+      .populaires-cards .card-subtitle {
+        font-size: ;
+      }
+    }
+
